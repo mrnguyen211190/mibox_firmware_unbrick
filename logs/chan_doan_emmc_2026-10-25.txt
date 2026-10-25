@@ -1,0 +1,27 @@
+Chẩn đoán eMMC qua u-boot (box ở chế độ TPL, identify 0-7-0-16), 2026-10-25 ~10:02
+Lệnh gửi bằng scripts/diag.py (bulkcmd). U-boot chỉ trả "success"/"failed", không có text chi tiết.
+
+identify: 0-7-0-16-0-0-0-0 (TPL)
+'echo 1234'                      -> success
+'mmc dev 0'                      -> failed
+'mmc dev 1'                      -> failed
+'mmc rescan'                     -> failed
+'mmc info'                       -> failed
+'amlmmc rescan 1'                -> success
+'store init 0'                   -> failed
+'disk_initial 0'                 -> failed
+'amlmmc dev 1'                   -> failed
+'amlmmc status'                  -> failed
+'amlmmc part 1'                  -> failed
+'amlmmc info'                    -> failed
+'mmcinfo'                        -> failed
+'amlmmc read 1 0x1080000 0 1'    -> failed
+'amlmmc read bootloader 0x1080000 0 0x200' -> failed
+'amlmmc read env 0x1080000 0 0x200'        -> failed
+'store dtb read 0x1080000'       -> failed
+'store rsv info'                 -> failed
+'keyman init 0x1234'             -> success
+'printenv'                       -> success
+
+=> Lệnh không đụng chip nhớ: chạy được. Mọi lệnh đọc/khởi tạo eMMC: thất bại.
+=> Kết luận (chưa xác nhận bằng UART): nhiều khả năng chip eMMC hỏng phần cứng.

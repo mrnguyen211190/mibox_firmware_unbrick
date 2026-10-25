@@ -1,0 +1,46 @@
+[10:01:01] WARNING Platform parser: Config value `BinPara:` fixed with: `0x0`
+[10:01:01] WARNING Platform parser: Config value `Uboot_down:` fixed with: `0x0`
+[10:01:01] WARNING Platform parser: Config value `Uboot_decomp:` fixed with: `0x0`
+[10:01:01] WARNING Platform parser: Config value `Uboot_enc_down:` fixed with: `0x0`
+[10:01:01] WARNING Platform parser: Config value `Uboot_enc_run:` fixed with: `0x0`
+[10:01:01] WARNING Platform parser: Config value `Uboot:` fixed with: `0x0`
+[10:01:01] WARNING Platform parser: Config value `Encrypt_reg0=` fixed with: `0x0`
+[10:01:01] WARNING Platform parser: Config value `Encrypt_reg1=` fixed with: `0x0`
+[10:01:01] WARNING Platform parser: Config value `Encrypt_reg2=` fixed with: `0x0`
+[10:01:01] WARNING Platform parser: Config value `needPassword=` fixed with: `0x0`
+[10:01:01] WARNING Platform parser: Config value `DDRSize:` fixed with: `0x0`
+[10:01:01] WARNING Platform parser: Config value `enc_chip_id1:` fixed with: `0x0`
+[10:01:01] WARNING Platform parser: Config value `enc_chip_id2:` fixed with: `0x0`
+[10:01:01] INFO    ---- start Password check ----
+[10:01:01] INFO    0-7-0-16-0-0-0-0 (TPL)
+[10:01:01] INFO    Not support Identify 6byte!
+[10:01:01] INFO    ---- done Password check ----
+[10:01:02] INFO    ---- start SecureBoot check ----
+[10:01:02] INFO    0-7-0-16-0-0-0-0 (TPL)
+[10:01:02] INFO    Read encrypt reg c8100228:bdfd71be Secure boot bit:16
+[10:01:02] INFO    ---- done SecureBoot check ----
+[10:01:02] INFO    ---- start Download SPL ----
+[10:01:02] INFO    ---- done Download SPL ----
+[10:01:02] INFO    ---- start Download UBOOT ----
+[10:01:02] INFO    No need download UBOOT
+[10:01:02] INFO    ---- done Download UBOOT ----
+[10:01:02] INFO    ---- start Commad     low_power ----
+[10:01:02] INFO    ---- done Commad     low_power ----
+[10:01:02] INFO    ---- start Download dtb.meson1 ----
+[10:01:02] INFO    Download media meson1 47136...
+[10:01:02] INFO    Transfer complete
+[10:01:02] INFO    ---- done Download dtb.meson1 ----
+[10:01:03] INFO    ---- start Commad disk_initial 1 ----
+order: ['Password check', 'SecureBoot check', 'Download SPL', 'Download UBOOT', 'Commad     low_power', 'Download dtb.meson1', 'Commad disk_initial 1', 'Download PARTITION._aml_dtb', 'Download PARTITION.boot', 'Download PARTITION.bootloader', 'Download PARTITION.logo', 'Download PARTITION.oem', 'Download PARTITION.recovery', 'Download PARTITION.system', 'Download PARTITION.vendor', 'Commad save_setting', 'Commad burn_complete 1']
+Traceback (most recent call last):
+  File "C:\Users\ThanhNT_X1\AppData\Local\Temp\claude\C--Users-ThanhNT-X1-Desktop-xiaomi\fbaa5453-bbd2-4a9a-89e1-8d0760c00c3c\scratchpad\boot\flash.py", line 37, in <module>
+    o.do_burn(steps)
+  File "C:\Users/THANHN~1/AppData/Local/Temp/claude/C--Users-ThanhNT-X1-Desktop-xiaomi/fbaa5453-bbd2-4a9a-89e1-8d0760c00c3c/scratchpad/pyaml_src/pyamlboot-master\pyamlboot\optimus.py", line 757, in do_burn
+    reopen_dev = step.do(dev)
+                 ^^^^^^^^^^^^
+  File "C:\Users/THANHN~1/AppData/Local/Temp/claude/C--Users-ThanhNT-X1-Desktop-xiaomi/fbaa5453-bbd2-4a9a-89e1-8d0760c00c3c/scratchpad/pyaml_src/pyamlboot-master\pyamlboot\optimus.py", line 650, in do
+    self._check_bulk_cmd(self._cmd, timeout=self._timeout)
+  File "C:\Users/THANHN~1/AppData/Local/Temp/claude/C--Users-ThanhNT-X1-Desktop-xiaomi/fbaa5453-bbd2-4a9a-89e1-8d0760c00c3c/scratchpad/pyaml_src/pyamlboot-master\pyamlboot\optimus.py", line 97, in _check_bulk_cmd
+    raise BulkCmdError(f'Command {cmd} status failed:{response}')
+pyamlboot.optimus.BulkCmdError: Command disk_initial 1 status failed:b'failed:\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+EXIT 1

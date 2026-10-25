@@ -1,0 +1,11 @@
+[2026-10-25 07:58:10 627][HUB1-1][0xffffffff]User stop burning
+[2026-10-25 08:02:35 226][HUB1-1][0xffffffff]User stop burning
+[2026-10-25 08:07:14 839][HUB1-7][0xffffffff]User stop burning
+[2026-10-25 08:12:06 226][HUB1-7][0xffffffff]User stop burning
+[2026-10-25 08:13:07 328][HUB1-7][0x30101002]UBOOT/Low power/Send command/USB Control setup error
+[2026-10-25 08:18:52 927][HUB1-7][0xffffffff]User stop burning
+[2026-10-25 08:20:02 940][HUB1-7][0xffffffff]User stop burning
+[2026-10-25 08:29:41 176][HUB1-7][0x30101004]UBOOT/Low power/Send command/Error result
+[2026-10-25 09:38:06 267][HUB1-7][0xffffffff]User stop burning
+[2026-10-25 09:43:01 536][HUB1-7][0xffffffff]User stop burning
+[2026-10-25 09:44:12 326][HUB1-7][0xffffffff]User stop burning

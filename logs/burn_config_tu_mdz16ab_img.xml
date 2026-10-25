@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<progress_configs version="2.0">
+  <command retry_count="3" wait_seconds="8">erase</command>
+  <command retry_count="10" wait_seconds="60">    low_power</command>
+  <command retry_count="3" status_wait_seconds="150" disk="mem" path="dtb" part="meson1" file_type="normal" verify_path="">load media</command>
+  <command retry_count="3" wait_seconds="60">disk_initial</command>
+  <command retry_count="3" status_wait_seconds="150" disk="store" path="PARTITION" part="_aml_dtb" file_type="normal" verify_path="_aml_dtb">load media</command>
+  <command retry_count="3" status_wait_seconds="150" disk="store" path="PARTITION" part="boot" file_type="normal" verify_path="boot">load media</command>
+  <command retry_count="3" status_wait_seconds="150" disk="store" path="PARTITION" part="logo" file_type="normal" verify_path="logo">load media</command>
+  <command retry_count="3" status_wait_seconds="150" disk="store" path="PARTITION" part="oem" file_type="normal" verify_path="oem">load media</command>
+  <command retry_count="3" status_wait_seconds="150" disk="store" path="PARTITION" part="recovery" file_type="normal" verify_path="recovery">load media</command>
+  <command retry_count="3" status_wait_seconds="150" disk="store" path="PARTITION" part="system" file_type="normal" verify_path="system">load media</command>
+  <command retry_count="3" status_wait_seconds="150" disk="store" path="PARTITION" part="vendor" file_type="normal" verify_path="vendor">load media</command>
+  <command retry_count="3" status_wait_seconds="150" disk="store" path="PARTITION" part="bootloader" file_type="normal" verify_path="bootloader">load media</command>
+  <command retry_count="3" wait_seconds="8">save_setting</command>
+  <command retry_count="3" wait_seconds="8">burn_complete</command>
+</progress_configs>

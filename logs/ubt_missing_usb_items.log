@@ -1,0 +1,46 @@
+[2026-10-25 10:00:10] [WARNING ]: Platform parser: Config value `BinPara:` fixed with: `0x0`
+[2026-10-25 10:00:10] [WARNING ]: Platform parser: Config value `Uboot_down:` fixed with: `0x0`
+[2026-10-25 10:00:10] [WARNING ]: Platform parser: Config value `Uboot_decomp:` fixed with: `0x0`
+[2026-10-25 10:00:10] [WARNING ]: Platform parser: Config value `Uboot_enc_down:` fixed with: `0x0`
+[2026-10-25 10:00:10] [WARNING ]: Platform parser: Config value `Uboot_enc_run:` fixed with: `0x0`
+[2026-10-25 10:00:10] [WARNING ]: Platform parser: Config value `Uboot:` fixed with: `0x0`
+[2026-10-25 10:00:10] [WARNING ]: Platform parser: Config value `Encrypt_reg0=` fixed with: `0x0`
+[2026-10-25 10:00:10] [WARNING ]: Platform parser: Config value `Encrypt_reg1=` fixed with: `0x0`
+[2026-10-25 10:00:10] [WARNING ]: Platform parser: Config value `Encrypt_reg2=` fixed with: `0x0`
+[2026-10-25 10:00:10] [WARNING ]: Platform parser: Config value `needPassword=` fixed with: `0x0`
+[2026-10-25 10:00:10] [WARNING ]: Platform parser: Config value `DDRSize:` fixed with: `0x0`
+[2026-10-25 10:00:10] [WARNING ]: Platform parser: Config value `enc_chip_id1:` fixed with: `0x0`
+[2026-10-25 10:00:10] [WARNING ]: Platform parser: Config value `enc_chip_id2:` fixed with: `0x0`
+[2026-10-25 10:00:10] [INFO    ]: ---- start Password check ----
+[2026-10-25 10:00:10] [INFO    ]: 0-7-0-16-0-0-0-0 (TPL)
+[2026-10-25 10:00:10] [INFO    ]: Not support Identify 6byte!
+[2026-10-25 10:00:10] [INFO    ]: ---- done Password check ----
+[2026-10-25 10:00:10] [INFO    ]: ---- start SecureBoot check ----
+[2026-10-25 10:00:10] [INFO    ]: 0-7-0-16-0-0-0-0 (TPL)
+[2026-10-25 10:00:10] [INFO    ]: Read encrypt reg c8100228:bdfd71be Secure boot bit:16
+[2026-10-25 10:00:10] [INFO    ]: ---- done SecureBoot check ----
+[2026-10-25 10:00:10] [INFO    ]: ---- start Download SPL ----
+[2026-10-25 10:00:10] [INFO    ]: ---- done Download SPL ----
+[2026-10-25 10:00:10] [INFO    ]: ---- start Download UBOOT ----
+Traceback (most recent call last):
+  File "C:\Users\ThanhNT_X1\AppData\Local\Temp\claude\C--Users-ThanhNT-X1-Desktop-xiaomi\fbaa5453-bbd2-4a9a-89e1-8d0760c00c3c\scratchpad\boot\run_ubt.py", line 5, in <module>
+    runpy.run_path(script, run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:/Users/THANHN~1/AppData/Local/Temp/claude/C--Users-ThanhNT-X1-Desktop-xiaomi/fbaa5453-bbd2-4a9a-89e1-8d0760c00c3c/scratchpad/pyaml_src/pyamlboot-master\ubt.py", line 73, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:/Users/THANHN~1/AppData/Local/Temp/claude/C--Users-ThanhNT-X1-Desktop-xiaomi/fbaa5453-bbd2-4a9a-89e1-8d0760c00c3c/scratchpad/pyaml_src/pyamlboot-master\ubt.py", line 69, in main
+    do_optimus_burn(args, aml_img)
+  File "C:\Users/THANHN~1/AppData/Local/Temp/claude/C--Users-ThanhNT-X1-Desktop-xiaomi/fbaa5453-bbd2-4a9a-89e1-8d0760c00c3c/scratchpad/pyaml_src/pyamlboot-master\pyamlboot\optimus.py", line 836, in do_optimus_burn
+    do_burn(burn_steps)
+  File "C:\Users/THANHN~1/AppData/Local/Temp/claude/C--Users-ThanhNT-X1-Desktop-xiaomi/fbaa5453-bbd2-4a9a-89e1-8d0760c00c3c/scratchpad/pyaml_src/pyamlboot-master\pyamlboot\optimus.py", line 757, in do_burn
+    reopen_dev = step.do(dev)
+                 ^^^^^^^^^^^^
+  File "C:\Users/THANHN~1/AppData/Local/Temp/claude/C--Users-ThanhNT-X1-Desktop-xiaomi/fbaa5453-bbd2-4a9a-89e1-8d0760c00c3c/scratchpad/pyaml_src/pyamlboot-master\pyamlboot\optimus.py", line 485, in do
+    self._update_part()
+  File "C:\Users/THANHN~1/AppData/Local/Temp/claude/C--Users-ThanhNT-X1-Desktop-xiaomi/fbaa5453-bbd2-4a9a-89e1-8d0760c00c3c/scratchpad/pyaml_src/pyamlboot-master\pyamlboot\optimus.py", line 247, in _update_part
+    raise ValueError(f'The image does not contain any {p}signed items')
+ValueError: The image does not contain any signed items
+EXIT 1
